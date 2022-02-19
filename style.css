@@ -1,0 +1,149 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E8DBF9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.game {
+    background-color: #416788;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+    border-radius: 23px;
+    height: 394px;
+    width: 271px;
+}
+
+.numbers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.guesses {
+    display: flex;
+    padding: 10px;
+}
+
+.guess {
+    border: #416788 2px solid;
+    background-color: #11312A;
+    width: 42px;
+    height: 42px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    font-size:1.5em ;
+}
+.estimate {
+    border: #416788 2px solid;
+    background: #7389A8;
+    width: 42px;
+    height: 42px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    font-size:1.5em ;
+}
+
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto,1.25em));
+    grid-auto-rows: 3em;
+    gap: .7rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #7389A8;
+    border-radius: 23px;
+    padding: 10px;
+    margin: 10px;
+    overflow:unset;
+}
+.key {
+    background-color: #11312A;
+    color: white;
+    border-radius: 7px;
+    height: 40px;
+    width: 68px;
+    font-size: inherit;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5em ;
+    border: 1px #7389A8 solid;
+    overflow: hidden;
+}
+
+.history {
+    width: 243px;
+    height: 33px;
+    border-radius: 23px;
+    font-size:1em ;
+    border: none;
+}
+
+.red {
+    background-color: #CD2527;
+    font-size:1em ;
+}
+
+.green {
+    background-color: #43CD43;
+    font-size:1em ;
+}
+button:hover {
+    filter: brightness(120%);
+    cursor: pointer;
+  }
+
+  @media all and (max-width: 500px){
+      .keyboard{
+          height: 200px;
+          padding: 10px;
+          align-content: center;
+          grid-row-gap: 20px;
+      }
+      .key{
+          height: 40px ;
+          font-size: 1.7em;
+      }
+      
+      .history{
+          font-size: 1.5em;
+      }
+  }
+
+  @media all and (min-width: 380px) and (max-width: 500px) {
+    .keyboard{
+        height: 200px;
+        padding: 10px;
+        align-content: center;
+        grid-row-gap: 1.3em;
+
+
+    }
+    .key{
+        height: 40px ;
+    }
+  }
