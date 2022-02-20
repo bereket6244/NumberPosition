@@ -20,8 +20,8 @@ body {
     justify-content: center;
     font-size: clamp(.5rem, 2.5vmin, 1.5rem);
     border-radius: 23px;
-    height: 394px;
-    width: 271px;
+    height: 100%;
+    width: 16.938rem;
 }
 
 .numbers {
