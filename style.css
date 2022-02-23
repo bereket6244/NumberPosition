@@ -10,6 +10,7 @@ body {
     margin: 0;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 .everything {
     display: flex;
