@@ -35,7 +35,7 @@ body {
     width: fit-content;
 }
 
-.history {
+/* .history {
     border-left: black 1px solid;
     background-color: #416788;
     border-radius: 0 23px 23px 0 ;
@@ -45,7 +45,7 @@ body {
     padding: 1em;
     margin: 0;
 
-}
+} */
 
 .text { 
     text-transform: uppercase;
@@ -163,7 +163,7 @@ button:hover {
 
 #board {
     background-color: #244969;
-    padding: 0.63em;
+    padding: 2em;
     padding-right:2em;
     display: grid;
     grid-template-columns: repeat(6, minmax(auto,1em));
