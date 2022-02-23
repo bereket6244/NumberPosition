@@ -7,13 +7,14 @@ var third = document.getElementById('third')
 var fourth = document.getElementById('fourth')
 const delt = document.getElementsByClassName("red")
 const entt = document.getElementsByClassName("green")
-var num = ["1", "2", "3", "4"]
+var num = []
 var numt = 0
 var pos = 0
 var s = 0
 
 document.addEventListener('DOMContentLoaded', () => {
     createSquares();
+    generateRandomNumber();
 })
 function createSquares () {
     const gameBoard = document.getElementById('board')
@@ -36,6 +37,8 @@ function createSquares () {
 
 startInteraction()
 
+
+
 function startInteraction() {
     document.addEventListener("click", handleMouseClick)
     document.addEventListener("keydown", handleKeyPress)
@@ -49,23 +52,18 @@ function stopInteraction() {
 // entt.addEventListener("click",submitGuess)
 
 function handleMouseClick(e) {
-    
+    if (e.target.matches("[data-enter]")){
+        submitGuess()
+        return
+    }
+    if (e.target.matches("[data-delete]")){
+        deleteKey()
+        return
+    }
     if (e.target.matches("[data-key]")){
         pressKey(e.target.dataset.key)
         return
     }
-    
-    
-
-    // if (e.target.matches("[data-enter]")){
-    //     submitGuess()
-    //     return
-    // }
-
-    // if (e.target.matches("[data-delete]")){
-    //     deleteKey()
-    //     return
-    // }
 
     
 }
@@ -108,6 +106,22 @@ function deleteKey(){
 }
 
 function generateRandomNumber(){
+    num[0] = (Math.floor(Math.random() * 10)).toString()
+    while(num [0] === "0"){
+    num[0] = (Math.floor(Math.random() * 10)).toString()
+    }
+    num[1] = (Math.floor(Math.random() * 10)).toString()
+    while(num[1] === num[0]){
+    num[1] = (Math.floor(Math.random() * 10)).toString()
+    }
+    num[2] = (Math.floor(Math.random() * 10)).toString()
+    while(num[2] === num [0] || num[2] === num[1]){
+    num[2] = (Math.floor(Math.random() * 10)).toString()
+    }
+    num[3] = (Math.floor(Math.random() * 10)).toString()
+    while(num[3] === num[0]||num[3] === num[1]||num[3] === num[2]){
+    num[3] = (Math.floor(Math.random() * 10)).toString()
+    }
     
 }
 function submitGuess() {
@@ -144,7 +158,7 @@ function checkNumPresence() {
         let nn = numt.toString()
         let np = pos.toString()
         
-        for (let k = 0; k <= s ; k++) {
+        for (let k = s; k <= s ; k++) {
         let abv = document.getElementsByClassName("cat1")[k]
         let bbv = document.getElementsByClassName("cat2")[k]
         let cbv = document.getElementsByClassName("cat3")[k]
@@ -172,12 +186,13 @@ function checkNumPresence() {
             
         }
         if (numt === 4 && pos === 4){
-                alert("yasss, slayy")
+                alert("yasss, slayy. Took you " + s + " number of tries")
                 stopInteraction()
             }
         }
     else {
         alert("input all fields")
-    }        
+    }
+    console.log(num)        
 }      
 }

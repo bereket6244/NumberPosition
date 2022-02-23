@@ -168,6 +168,7 @@ button:hover {
     padding: 10px;
     margin: 10px;
     overflow:unset;
+    
 }
 
 #board {
@@ -177,7 +178,8 @@ button:hover {
     padding-top: 2em;
     width: fit-content;
     height: 20em;
-    overflow: scroll;
+    overflow: auto;
+    border-bottom: solid rgb(13, 53, 128) 1px;
 }
 
 .estimates {
