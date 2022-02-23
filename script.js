@@ -11,15 +11,13 @@ var num = []
 var numt = 0
 var pos = 0
 var s = 0
-
 document.addEventListener('DOMContentLoaded', () => {
     createSquares();
     generateRandomNumber();
 })
 function createSquares () {
     const gameBoard = document.getElementById('board')
-
-    for (let i = 1; i <= 6; i++) {
+     for (let i = 1; i <= 6; i++) {
         let square = document.createElement('div')
         square.classList.add("guess")
         square.classList.add("cat" + i.toString())
@@ -34,11 +32,7 @@ function createSquares () {
         gameBoard.appendChild(square)
     }
 }
-
 startInteraction()
-
-
-
 function startInteraction() {
     document.addEventListener("click", handleMouseClick)
     document.addEventListener("keydown", handleKeyPress)
@@ -48,8 +42,6 @@ function stopInteraction() {
     document.removeEventListener("click", handleMouseClick)
     document.removeEventListener("keydown", handleKeyPress)
 }
-// delt.addEventListener("click", deleteKey)
-// entt.addEventListener("click",submitGuess)
 
 function handleMouseClick(e) {
     if (e.target.matches("[data-enter]")){
@@ -186,13 +178,14 @@ function checkNumPresence() {
             
         }
         if (numt === 4 && pos === 4){
-                alert("yasss, slayy. Took you " + s + " number of tries")
-                stopInteraction()
+            alert("yasss, slayy. Took you " + s + " plus 1 number of tries")
+            stopInteraction()
+                
+                
             }
         }
     else {
-        alert("input all fields")
     }
-    console.log(num)        
+            
 }      
 }

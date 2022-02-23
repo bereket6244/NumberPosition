@@ -15,21 +15,24 @@ body {
 }
 .everything {
     display: flex;
-    flex-direction: row;
-    width: 500px;
+    /* flex-direction: row; */
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .game {
     background-color: #416788;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
-    font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+    gap: 2em;
+    padding: 2em;
     border-radius: 23px 0 0 23px ;
-    height: inherit;
-    width: inherit;
-    border-right: black 1px solid;
+    height: fit-content;
+    width: fit-content;
 }
 
 .history {
@@ -68,10 +71,10 @@ body {
 
 .guess-grid {
 
-    padding: 10px;
     display: grid;
     grid-template-columns: repeat(4, minmax(auto,1.25em));
-    padding-top: 2em;
+    align-items: center;
+    justify-content: center;
 }
 
 .guess {
@@ -103,34 +106,32 @@ body {
 .keyboard {
     display: grid;
     height: fit-content;
-    grid-template-columns: repeat(3, minmax(auto,1.25em));
-    grid-auto-rows: 3em;
-    gap: .7rem;
+    width: fit-content;
+    grid-template-columns: repeat(3, minmax(auto,1em));
     justify-content: center;
     align-items: center;
     background-color: #7389A8;
     border-radius: 23px;
-    padding: 10px;
-    margin: 10px;
     overflow:unset;
+    padding: 1em;  
+    gap: 0.2em;
 }
 .key {
     background-color: #11312A;
     color: white;
     border-radius: 7px;
-    height: fit-content;
-    width: 68px;
-    font-size: 0.2rem;
-    border: none;
-    padding: 0.2em;
-    margin: 0;
+
+    width: fit-content;
+    padding: 0.8em;
+    margin: 0.3em;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size:1.5em ;
     border: 1px #7389A8 solid;
-    overflow: hidden;
+    /* overflow: hidden; */
     user-select: none;
+    height: 40px ;
 }
 
 .history-key {
@@ -157,31 +158,19 @@ button:hover {
     cursor: pointer;
   }
 
-  .keyboard {
-    display: grid;
-    height: fit-content;
-    grid-template-columns: repeat(3, minmax(auto,1.25em));
-    grid-auto-rows: 3em;
-    gap: .7rem;
-    justify-content: center;
-    align-items: center;
-    background-color: #7389A8;
-    border-radius: 23px;
-    padding: 10px;
-    margin: 10px;
-    overflow:unset;
-    
-}
+  
 
 #board {
-    padding: 10px;
+    background-color: #244969;
+    padding: 0.63em;
+    padding-right:2em;
     display: grid;
     grid-template-columns: repeat(6, minmax(auto,1em));
-    padding-top: 2em;
     width: fit-content;
-    height: 20em;
     overflow: auto;
-    border-bottom: solid rgb(13, 53, 128) 1px;
+    border-radius:0 23px 23px 0;
+    min-height: 24.9em;
+    max-height:24.9em ;
 }
 
 .estimates {
@@ -189,10 +178,10 @@ button:hover {
     color: whitesmoke;
 }
 
-  @media all and (max-width: 500px){
+  /* @media all and (max-width: 500px){
       .keyboard{
           /* height: 200px; */
-          padding: 10px;
+          /* padding: 10px;
           align-content: center;
           grid-row-gap: 20px;
       }
@@ -209,12 +198,12 @@ button:hover {
   @media all and (min-width: 380px) and (max-width: 500px) {
     .keyboard{
         /* height: 200px; */
-        padding: 10px;
+        /* padding: 10px;
         align-content: center;
         grid-row-gap: 1.3em;
 
 
-    }
+    } */
     .key{
         height: 40px ;
     }
