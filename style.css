@@ -11,6 +11,11 @@ body {
     align-items: center;
     justify-content: center;
 }
+.everything {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+}
 
 .game {
     background-color: #416788;
@@ -19,9 +24,35 @@ body {
     align-items: center;
     justify-content: center;
     font-size: clamp(.5rem, 2.5vmin, 1.5rem);
-    border-radius: 23px;
-    height: 100%;
-    width: 16.938rem;
+    border-radius: 23px 0 0 23px ;
+    height: inherit;
+    width: inherit;
+    border-right: black 1px solid;
+}
+
+.history {
+    border-left: black 1px solid;
+    background-color: #416788;
+    border-radius: 0 23px 23px 0 ;
+    height: inherit;
+    width: fit-content;
+    
+    padding: 1em;
+    margin: 0;
+
+}
+
+.text { 
+    text-transform: uppercase;
+    color: whitesmoke;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+
 }
 
 .numbers {
@@ -33,9 +64,12 @@ body {
     gap: 10px;
 }
 
-.guesses {
-    display: flex;
+.guess-grid {
+
     padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto,1.25em));
+    padding-top: 2em;
 }
 
 .guess {
@@ -66,6 +100,7 @@ body {
 
 .keyboard {
     display: grid;
+    height: fit-content;
     grid-template-columns: repeat(3, minmax(auto,1.25em));
     grid-auto-rows: 3em;
     gap: .7rem;
@@ -81,11 +116,11 @@ body {
     background-color: #11312A;
     color: white;
     border-radius: 7px;
-    height: 40px;
+    height: fit-content;
     width: 68px;
-    font-size: inherit;
+    font-size: 0.2rem;
     border: none;
-    padding: 0;
+    padding: 0.2em;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -93,9 +128,10 @@ body {
     font-size:1.5em ;
     border: 1px #7389A8 solid;
     overflow: hidden;
+    user-select: none;
 }
 
-.history {
+.history-key {
     width: 243px;
     height: 33px;
     border-radius: 23px;
@@ -106,20 +142,54 @@ body {
 .red {
     background-color: #CD2527;
     font-size:1em ;
+    padding: 0.56em;
+
 }
 
 .green {
     background-color: #43CD43;
     font-size:1em ;
+    padding: 0.56em;
+
 }
 button:hover {
     filter: brightness(120%);
     cursor: pointer;
   }
 
+  .keyboard {
+    display: grid;
+    height: fit-content;
+    grid-template-columns: repeat(3, minmax(auto,1.25em));
+    grid-auto-rows: 3em;
+    gap: .7rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #7389A8;
+    border-radius: 23px;
+    padding: 10px;
+    margin: 10px;
+    overflow:unset;
+}
+
+#board {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(auto,1em));
+    padding-top: 2em;
+    width: fit-content;
+    height: 20em;
+    overflow: scroll;
+}
+
+.estimates {
+    background: #373e47;
+    color: whitesmoke;
+}
+
   @media all and (max-width: 500px){
       .keyboard{
-          height: 200px;
+          /* height: 200px; */
           padding: 10px;
           align-content: center;
           grid-row-gap: 20px;
@@ -136,7 +206,7 @@ button:hover {
 
   @media all and (min-width: 380px) and (max-width: 500px) {
     .keyboard{
-        height: 200px;
+        /* height: 200px; */
         padding: 10px;
         align-content: center;
         grid-row-gap: 1.3em;
