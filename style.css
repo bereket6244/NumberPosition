@@ -73,12 +73,13 @@ body {
 
     display: grid;
     grid-template-columns: repeat(4, minmax(auto,1.25em));
+    gap: 2px;
     align-items: center;
     justify-content: center;
 }
 
 .guess {
-    border: #244969 2px solid;
+    /* border: #244969 2px solid; */
     background-color: #11312A;
     width: 42px;
     height: 42px;
@@ -155,7 +156,8 @@ body {
 }
 
 img {
-    height: 1em;
+    height: fit-content;
+    width: 0.6em;
 }
 button:hover {
     filter: brightness(120%);
@@ -171,6 +173,7 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(6, minmax(auto,1em));
     grid-auto-rows: min-content;
+    gap: 2px;
     width: fit-content;
     overflow: auto;
     border-radius:0 23px 23px 0;
@@ -212,4 +215,4 @@ button:hover {
     .key{
         height: 40px ;
     }
-  }
+  

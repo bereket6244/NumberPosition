@@ -15,16 +15,17 @@ var correctNumber = 0
 var correctPosition = 0
 // Counts the amount of turns you took starting from 0
 var triedAmount = 0
-// loads when the page is opened and refreshed. it creates the first set of squares in the history tab and generates a ran num 
+/* loads when the page is opened and refreshed. it creates the first set of 
+squares in the history tab and generates a ran num*/
 document.addEventListener('DOMContentLoaded', () => {
     createSquares();
     generateRandomNumber();
 })
 
 startInteraction() 
-// creates the squares in the history gives them the classes "guess" and ("cat" + i) where i is 
-// used to differentiate between all 6 of the squares formed for 
-// later use section taken from "https://youtu.be/j7OhcuZQ-q8?t=399"
+/* creates the squares in the history gives them the classes "guess" and ("cat" + i) where i is 
+ used to differentiate between all 6 of the squares formed for 
+ later use section taken from "https://youtu.be/j7OhcuZQ-q8?t=399" */
 function createSquares () {
     const gameBoard = document.getElementById('board')
      for (let i = 1; i <= 6; i++) {
@@ -42,7 +43,8 @@ function createSquares () {
         gameBoard.appendChild(square)
     }
 }
-// loads when the page first loads and then waits for input taken from "https://youtu.be/Wak7iN4JZzU" upuntil the handleKeypress function
+/* loads when the page first loads and then waits for input taken from "https://youtu.be/Wak7iN4JZzU" 
+upuntil the handleKeypress function*/
 function startInteraction() {
     document.addEventListener("click", handleMouseClick)
     document.addEventListener("keydown", handleKeyPress)
@@ -84,7 +86,8 @@ function handleKeyPress(e) {
     }
 }
 
-//for input keys: lets user input data to the guessing squares and adds the class name active for said guessing square 
+/*for input keys: lets user input data to the guessing squares and adds the class 
+name active for said guessing square*/
 function pressKey(key) {
     for (let i = 0; i < 4; i++) {
         if ( document.getElementsByClassName('guess')[i].classList[1] !== "active"){
@@ -95,7 +98,8 @@ function pressKey(key) {
     } 
 }
 
-//for delete key: lets user delete data from the guessing squares and removes the class name active for said guessing square
+/*for delete key: lets user delete data from the guessing squares and removes the 
+class name active for said guessing square*/
 function deleteKey(){
      for (i = 3; i >= 0; i--) {
         if (document.getElementsByClassName('guess')[i].classList[1] === "active"){
@@ -127,7 +131,8 @@ function generateRandomNumber(){
     
 }
 
-// for enter key: lets user submit the guess to run checkNumPresence and then resents correctNumber & correctPosition for next guess
+/*for enter key: lets user submit the guess to run checkNumPresence and then resents 
+correctNumber & correctPosition for next guess*/
 function submitGuess() {
     checkNumPresence();
     correctNumber = 0
@@ -136,7 +141,8 @@ function submitGuess() {
 
 // checks how many numbers match and how many of them are in the correct position
 function checkNumPresence() {
-    //starting from this till the next if statement: checks to see the correct orientation of numbers is entered from user
+    /*starting from this till the next if statement: checks to see the correct 
+    orientation of numbers is entered from user*/
     if ( first.innerHTML === second.innerHTML || first.innerHTML=== third.innerHTML || first.innerHTML === fourth.innerHTML ||
         second.innerHTML === third.innerHTML || second.innerHTML === fourth.innerHTML||
         third.innerHTML === fourth.innerHTML){
@@ -166,10 +172,10 @@ function checkNumPresence() {
         // Converts the amount of correct numbers and correct positions to string 
         let nn = correctNumber.toString()
         let np = correctPosition.toString()
-        // the for loop below gets the number the user has 
-        //input("n" + i)(where i is an integer from 1-4), amount of correct numbers and 
-        // the amount of correct positions and assigns them to the empty 
-        // divs that were assigned 6 ("cat" + i)(where i is an integer form 1-6) classes  
+        /* the for loop below gets the number the user has 
+        input("n" + i)(where i is an integer from 1-4), amount of correct numbers and 
+         the amount of correct positions and assigns them to the empty 
+         divs that were assigned 6 ("cat" + i)(where i is an integer form 1-6) classes */ 
         for (let k = triedAmount; k <= triedAmount ; k++) {
         let abv = document.getElementsByClassName("cat1")[k]
         let bbv = document.getElementsByClassName("cat2")[k]
@@ -184,10 +190,10 @@ function checkNumPresence() {
         ebv.innerHTML = nn
         fbv.innerHTML = np   
         }
-        // if the correct number of guesses and number of position is not found. this
-        //creates the next set of squares in the history tab and emptys out
-        // the user input field and removes the class name "active" that
-        // was given when the user submitted his/her previous guess. 
+        /* if the correct number of guesses and number of position is not found. this
+         creates the next set of squares in the history tab and emptys out
+         the user input field and removes the class name "active" that
+         was given when the user submitted his/her previous guess.*/ 
         if (correctNumber !==4 || correctPosition !==4 ) {
             triedAmount++
             createSquares(); 
