@@ -78,7 +78,7 @@ body {
 }
 
 .guess {
-    border: #416788 2px solid;
+    border: #244969 2px solid;
     background-color: #11312A;
     width: 42px;
     height: 42px;
@@ -167,6 +167,7 @@ button:hover {
     padding-right:2em;
     display: grid;
     grid-template-columns: repeat(6, minmax(auto,1em));
+    grid-auto-rows: min-content;
     width: fit-content;
     overflow: auto;
     border-radius:0 23px 23px 0;
