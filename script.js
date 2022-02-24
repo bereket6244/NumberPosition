@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 startInteraction() 
 /* creates the squares in the history gives them the classes "guess" and ("cat" + i) where i is 
  used to differentiate between all 6 of the squares formed for 
- later use section taken from "https://youtu.be/j7OhcuZQ-q8?t=399" */
+ later use. section taken from "https://youtu.be/j7OhcuZQ-q8?t=399" */
 function createSquares () {
     const gameBoard = document.getElementById('board')
      for (let i = 1; i <= 6; i++) {
@@ -189,6 +189,13 @@ function checkNumPresence() {
         dbv.innerHTML = n4
         ebv.innerHTML = nn
         fbv.innerHTML = np   
+        if (k === 6) {
+            const eleni = document.getElementsByClassName("cat6")[5]
+            eleni.addEventListener("click", () => {
+            alert( "the numbers " + ranNum + " you fucking loser. i wont let you finish this game")
+            stopInteraction()
+        })
+        }
         }
         /* if the correct number of guesses and number of position is not found. this
          creates the next set of squares in the history tab and emptys out
