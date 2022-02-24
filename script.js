@@ -190,9 +190,9 @@ function checkNumPresence() {
         ebv.innerHTML = nn
         fbv.innerHTML = np   
         if (k === 6) {
-            const eleni = document.getElementsByClassName("cat6")[5]
-            eleni.addEventListener("click", () => {
-            alert( "the numbers " + ranNum + " you fucking loser. i wont let you finish this game")
+            const cheat = document.getElementsByClassName("cat6")[5]
+            cheat.addEventListener("click", () => {
+            alert( "The numbers are " + ranNum + " you fucking loser. I wont let you finish this game")
             stopInteraction()
         })
         }
