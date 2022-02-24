@@ -107,7 +107,7 @@ body {
     display: grid;
     height: fit-content;
     width: fit-content;
-    grid-template-columns: repeat(3, minmax(auto,1em));
+    grid-template-columns: repeat(3, auto);
     justify-content: center;
     align-items: center;
     background-color: #7389A8;
@@ -144,15 +144,18 @@ body {
 }
 .red {
     background-color: #CD2527;
-    font-size:1em ;
-    padding: 0.56em;
+    /* font-size:1em ; */
+    
 }
 
 .green {
     background-color: #43CD43;
-    font-size:1em ;
-    padding: 0.56em;
+    
 
+}
+
+img {
+    height: 1em;
 }
 button:hover {
     filter: brightness(120%);
