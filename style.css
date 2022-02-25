@@ -84,7 +84,7 @@ button {
     /* border-radius: 1rem; */
     background-color: #303233;
     border:white solid 0.05rem;
-
+    user-select:none;
     color: white;
     display: flex;
     justify-content: center;
