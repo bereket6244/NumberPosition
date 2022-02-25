@@ -1,15 +1,15 @@
 <strong>Number-Position GAME</strong>
 
-The rules are simple. Theres a four digit number and your goal is to 
-find that four digit number. You start by submitting your guess like 
+The rules are simple. There's a four digit number and your goal is to 
+find that number. You start by submitting your guess like 
 you see here.
 
 ![image](https://user-images.githubusercontent.com/74484536/155799217-96c6bc47-b9b3-4dd9-ae43-ea70f6926813.png)
 
-The game then tells you the amount of matching digits it has and how 
-many of those matching digits are in the correct position.The amount of 
-correct digits is displayed on the first light blue squares and the amount of 
-correct positions is stored on the second light blue squares like so.
+The game then tells you the amount of matching digits it has with the number you're supposed to find
+and how many of those matching digits are in the correct position.The amount of 
+correct digits is displayed on the first dark brown squares and the amount of 
+correct positions is stored on the second dark brown squares like so.
 
 ![image](https://user-images.githubusercontent.com/74484536/155799106-4e3437cd-03c5-40cc-9537-b96cf063fbf5.png)
 
@@ -27,8 +27,6 @@ guess
 . The number you have to find never has similar digits 
 
 ps. The history button is not functional yet.
-
-pps. The game isn't responsive for mobile yet so enjoy on your PC
 
 Enjoy <strong>[Number Position](https://bereket6244.github.io/NumberPosition/)</strong>
 
