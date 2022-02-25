@@ -77,7 +77,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* return 4 to 5 if the history button is present */
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     gap: 0.1rem;
     padding: 1rem;
 }
