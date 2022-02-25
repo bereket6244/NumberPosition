@@ -215,7 +215,7 @@ function checkNumPresence() {
         }
         // outputs message for the winner and the amount of tries it took them
         if (correctNumber === 4 && correctPosition === 4){
-            alert("yasss, slayy. Took you " + triedAmount + " plus 1 number of tries")
+            alert("Yasss, slayy. Took you " + triedAmount + " number of tries")
             stopInteraction()   
             }
         }        
