@@ -94,6 +94,10 @@ function handleMouseClick(e) {
         pressHistory()
         return
     }
+    if(e.target.matches("[data-back]")){
+        pressBack()
+        return
+    }
 }
 
 function handleKeyPress(e) {
@@ -114,6 +118,10 @@ function handleKeyPress(e) {
 
     if (e.key === "h" || e.key === "H"){
         pressHistory()
+        return
+    }
+    if (e.key === "b" || e.key === "H") {
+        pressBack()
         return
     }
 }
@@ -145,6 +153,10 @@ function deleteKey(){
 // history button function nothing assigned to it yet
 function pressHistory(){
     alert("the history is right there homie")
+}
+
+function pressBack(){
+    alert("works")
 }
 
 // the function that runs when you press enter

@@ -7,6 +7,7 @@
     font-size: 20px;
     color: white;
     font-weight: bold;
+    user-select: no;
 }
 body {
     display: flex;
@@ -84,7 +85,7 @@ button {
     /* border-radius: 1rem; */
     background-color: #303233;
     border:white solid 0.05rem;
-    user-select:none;
+
     color: white;
     display: flex;
     justify-content: center;
@@ -153,4 +154,10 @@ svg{
 .cat5, .cat6 {
     background-color: #303233;
     border: none;
+    
+}
+
+.span-6 {
+    grid-column: span 6;
+    aspect-ratio: 6/1;
 }
