@@ -1,7 +1,7 @@
 <strong>Number-Position GAME</strong>
 
 The rules are simple. There's a four digit number and your goal is to 
-find that number. You start by submitting your guess like 
+find it. You start by submitting your guess like 
 you see here.
 
 ![image](https://user-images.githubusercontent.com/74484536/155799217-96c6bc47-b9b3-4dd9-ae43-ea70f6926813.png)
