@@ -102,7 +102,7 @@ function handleMouseClick(e) {
         pressBack()
         return
     }
-    if(e.target.matches("[data-restart")){
+    if(e.target.matches("[data-restart]")){
         pressRestart()
         return
     }
