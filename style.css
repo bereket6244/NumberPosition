@@ -4,7 +4,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     font-weight: bold;
     user-select: none;
@@ -17,8 +17,8 @@ body {
 }
 .container {
     display: flex;
-    height: 500px;
-    width: 300px;
+    height: 30rem;
+    width: 17rem;
     border-radius: 1rem;
     /* overflow: hidden; */
 }
@@ -154,10 +154,12 @@ svg{
 }
 .red {
     background-color: #CD2527; 
+    padding: 0.1rem;
     
 }
 .green {
     background-color: #43CD43;
+    padding: 0.1rem;
 }
 .cat5, .cat6 {
     background-color: #303233;
@@ -188,4 +190,24 @@ svg{
 
 .restart {
     height: 100%;
+}
+.bi {
+    width: 250%;
+}
+
+@media screen and (max-width:600px) {
+    * {
+        font-size: 40px;
+    }
+    .container {
+        height: 100vh;
+        width: 100vh;
+        
+    }
+}
+
+@media screen and (max-height:47rem) {
+    .container {
+        height: 100vh;
+    }
 }
