@@ -32,12 +32,14 @@ body {
     transition: position 1s 0s ease-in-out;
 }
 .menu {
-    height: 1.5rem;
+    height: 1rem;
     width: 100%;
     margin: 0;
     background-color: #3f3f37;
-    padding:0.3rem;
+    padding:0.2rem;
     padding-right: 0.4rem;
+    display: flex;
+    align-items: center;
 }
 .preview {
     height: 40%;
@@ -196,6 +198,15 @@ svg{
 }
 
 @media screen and (max-width:600px) {
+    html{
+        height: 0;
+        width: 0;
+    }
+    body {
+        /* min-height: 100vh;     */
+        height: fit-content;
+        width: fit-content;
+    }
     .container {
         height: 100vh;
         width: 100vh;
