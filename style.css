@@ -17,8 +17,8 @@ body {
 }
 .container {
     display: flex;
-    height: 400px;
-    width: 505px;
+    height: 450px;
+    width: 500px;
     border-radius: 1rem;
     /* overflow: hidden; */
 }
