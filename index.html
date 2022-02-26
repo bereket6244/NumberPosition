@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container"  >
-        <div class="game box">
-            <!-- <div class="menu"></div> -->
+        <div class="game box" id="gam">
+            <div class="menu"><img src="https://img.icons8.com/ios-filled/50/ffffff/rotate.png" class="restart" data-restart></div>
             <div class="preview">
                 <div class="guessed square" id="firsth"></div>
                 <div class="guessed square" id="secondh"></div>
@@ -26,7 +26,7 @@
                 <div></div>
             </div>
             <div class="keyboard">
-<!--                 <button class="key span-3" data-history>HISTORY</button> -->
+                <button class="key span-3" data-history>HISTORY</button>
                 <button class="key" data-key="1">1</button>
                 <button class="key" data-key="2">2</button>
                 <button class="key" data-key="3">3</button>
@@ -45,13 +45,13 @@
                   </svg></button>
             </div>
         </div>
-        <div class="history box">
+        <div class="history box active" id="his">
             <div id="board-container" data-guess-grid>
-                <div id="board"> 
-                
-                     
+                <div id="board">   
                 </div>
             </div>
+            <button class="span-6" data-back>Back</button>
+
         </div>
     </div>
     <script src="./main.js" defer></script>

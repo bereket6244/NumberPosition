@@ -9,10 +9,13 @@ let first = document.getElementById("first")
 let second = document.getElementById("second")
 let third = document.getElementById("third")
 let fourth = document.getElementById("fourth")
+// let history = document.getElementsByClassName("history")
 let correctPosition = 0
 let correctNumber = 0
 let triedAmount = 1
 let ranNum = []
+// let actialNum
+
 
 /* runs the functions that make the first rows of 
 squares in the hisory section, activates the 
@@ -42,6 +45,7 @@ function generateRandomNumber(){
     while(ranNum[3] === ranNum[0]||ranNum[3] === ranNum[1]||ranNum[3] === ranNum[2]){
     ranNum[3] = (Math.floor(Math.random() * 10)).toString()
     }   
+    //  actialNum = (ranNum[0].parseint()*1000) + (ranNum[1].parseint()*100) + (ranNum[2].parseint()*10) + (ranNum[3].parseint())
 }
 
 // creates the squares when you submit a guess and once when you load the page
@@ -98,6 +102,10 @@ function handleMouseClick(e) {
         pressBack()
         return
     }
+    if(e.target.matches("[data-restart")){
+        pressRestart()
+        return
+    }
 }
 
 function handleKeyPress(e) {
@@ -122,6 +130,14 @@ function handleKeyPress(e) {
     }
     if (e.key === "b" || e.key === "H") {
         pressBack()
+        return
+    }
+    if (e.key ==="r" || e.key === "R"){
+        pressRestart()
+        return
+    }
+    if(e.key === "t" || e.key ==="R"){
+        pressToggle()
         return
     }
 }
@@ -152,12 +168,24 @@ function deleteKey(){
  
 // history button function nothing assigned to it yet
 function pressHistory(){
-    alert("the history is right there homie")
+    document.getElementById("gam").classList.add("active")  
+    document.getElementById("his").classList.remove("active") 
 }
 
 function pressBack(){
-    alert("works")
+    document.getElementById("his").classList.add("active") 
+    document.getElementById("gam").classList.remove("active") 
 }
+
+function pressToggle() {
+    document.getElementById("his").classList.toggle("active")
+    document.getElementById("gam").classList.toggle("active")
+}
+function pressRestart() {
+    alert("The number was " + ranNum)
+    location.reload()
+}
+
 
 // the function that runs when you press enter
 function submitGuess(){
@@ -174,6 +202,9 @@ function checkNumPresence() {
           third.innerHTML === fourth.innerHTML){
               if (first.innerHTML === "" && second.innerHTML === "" && third.innerHTML=== "" && fourth.innerHTML=== ""){
                   alert("All fields are empty")
+              }
+              else if(first.innerHTML === "" || second.innerHTML === "" || third.innerHTML=== "" || fourth.innerHTML=== ""){
+                  alert("Fill all fields")
               }
               else{
                 alert("you cant input the same digit twice")
