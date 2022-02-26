@@ -197,7 +197,7 @@ svg{
     width: 250%;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:750px) {
     html{
         height: 100vh;
         width: 100vw;
@@ -209,7 +209,7 @@ svg{
         
     }
     .menu{
-        height: 4rem;
+        height: rem;
     }
 }
 
