@@ -202,15 +202,14 @@ svg{
         height: 0;
         width: 0;
     }
-    body {
-        /* min-height: 100vh;     */
-        height: fit-content;
-        width: fit-content;
-    }
+    
     .container {
         height: 100vh;
         width: 100vh;
         
+    }
+    .menu{
+        height: 2rem;
     }
 }
 
