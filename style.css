@@ -199,8 +199,8 @@ svg{
 
 @media screen and (max-width:600px) {
     html{
-        height: 0;
-        width: 0;
+        height: 100vh;
+        width: 100vw;
     }
     
     .container {
