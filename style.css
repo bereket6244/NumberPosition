@@ -22,6 +22,7 @@ body {
     border-radius: 1rem;
     /* overflow: hidden; */
     margin-top:1rem;
+    margin-bottom:1rem;
 }
 .box {
     height: 100%;
