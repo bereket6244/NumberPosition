@@ -136,7 +136,7 @@ function handleKeyPress(e) {
         pressRestart()
         return
     }
-    if(e.key === "t" || e.key ==="R"){
+    if(e.key === "t" || e.key ==="T" || e.key === "Escape"){
         pressToggle()
         return
     }
