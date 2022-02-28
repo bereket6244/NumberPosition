@@ -120,7 +120,7 @@ function handleKeyPress(e) {
         pressHistory()
         return
     }
-    if (e.key === "b" || e.key === "H") {
+    if (e.key === "b" || e.key === "B") {
         pressBack()
         return
     }
