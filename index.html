@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./scrip.js" defer></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <nav class="navbar">
+        <div class="title">
+            <h1>
+                NUMP0
+            </h1>
+        </div>
+        <div class="hamburger">
+            <span class="span1"></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="list-items hidden">
+            <ul>
+                <li><a href="#">Instructions</a></li>
+                <li><a href="#">Stats</a></li>
+                <li><a href="#" data-restart>Give Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- game -->
+    <div class="container">
+        <div class="game">
+            <div class="preview">
+                <div class="guessed square" id="firsth"></div>
+                <div class="guessed square" id="secondh"></div>
+                <div class="guessed square" id="thirdh"></div>
+                <div class="guessed square" id="fourthh"></div>
+                <div class="estimated square" id="numberh"></div>
+                <div class="estimated square" id ="positionh"></div>
+                <div></div>
+                <div class="guess square" id="first"></div>
+                <div class="guess square" id="second"></div>
+                <div class="guess square" id="third"></div>
+                <div class="guess square" id="fourth"></div>
+                <div></div>
+            </div>
+            <div class="keyboard">
+                <button class="span-3 key"data-history>history</button>
+                <button class="key" data-key="1">1</button>
+                <button class="key" data-key="2">2</button>
+                <button class="key" data-key="3">3</button>
+                <button class="key" data-key="4">4</button>
+                <button class="key" data-key="5">5</button>
+                <button class="key" data-key="6">6</button>
+                <button class="key" data-key="7">7</button>
+                <button class="key" data-key="8">8</button>
+                <button class="key" data-key="9">9</button>
+                <button class="key red" data-delete>Del</button>
+                <button class="key" data-key="0">0</button>
+                <button class="key green" data-enter>Ent</button>
+            </div>
+        </div>
+        <div class="history box hide">
+            <div id="board-container" data-guess-grid>
+                <div id="board">
+                </div>
+     </div>
+      <button class="back-button" data-back>Back</button>
+ </div>
+
+</body>
+</html>
