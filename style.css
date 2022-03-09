@@ -297,4 +297,7 @@ button:hover {
     height: 95%;
     width: 100%;
   }
+  .container {
+    height: calc(100% - var(--nav-bar-height));
+  }
 }
