@@ -2,9 +2,15 @@ const hamburger = document.getElementsByClassName('hamburger')[0]
 const listitems = document.getElementsByClassName('list-items')[0]
 const history = document.getElementsByClassName('history')[0]
 const game = document.getElementsByClassName('game')[0]
+const hamburger1 = document.getElementsByClassName('first')[0];
+const hamburger2 = document.getElementsByClassName('second')[0];
+const hamburger3 = document.getElementsByClassName('third')[0];
 
 hamburger.addEventListener('click', () => {
-    listitems.classList.toggle('hidden')
+  listitems.classList.toggle('hidden')
+  hamburger1.classList.toggle('top')
+  hamburger2.classList.toggle('middle')
+  hamburger3.classList.toggle('bottom')
 })
 let firsth = document.getElementById("firsth")
 let secondh = document.getElementById("secondh")
