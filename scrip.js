@@ -5,6 +5,20 @@ const game = document.getElementsByClassName('game')[0]
 const hamburger1 = document.getElementsByClassName('first')[0];
 const hamburger2 = document.getElementsByClassName('second')[0];
 const hamburger3 = document.getElementsByClassName('third')[0];
+const closeBtn = document.getElementsByClassName("x-button")[0]
+const instructions = document.getElementsByClassName('instructions')[0]
+const instructionOpener = document.getElementsByClassName('instructions-opener')[0]
+
+closeBtn.addEventListener('click', () => {
+    instructions.classList.add('hidden-instructions')
+  })
+
+  instructionOpener.addEventListener('click', ()=>{
+    instructions.classList.remove('hidden-instructions')
+  listitems.classList.toggle('hidden')
+
+
+  })
 
 hamburger.addEventListener('click', () => {
   listitems.classList.toggle('hidden')
