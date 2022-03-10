@@ -254,6 +254,26 @@ button:hover {
     z-index: -1;
     transform: translateY(calc(-100% - var(--nav-bar-height)));
   }
+  
+  .top {
+    position:fixed;
+    right:1rem;
+    top:1.5rem;
+    transform:rotate(45deg);
+  }
+  
+  .middle {
+    position:fixed;
+    right:1rem;
+    top:1.5rem;
+    transform:rotate(-45deg);
+  }
+  .bottom {
+    position:fixed;
+    right:1rem;
+    top:1.5rem;
+    transform:rotate(-45deg);
+  }
   /* this is all for navigation */
 }
 
