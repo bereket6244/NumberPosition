@@ -211,7 +211,7 @@ button:hover {
   position: absolute;
   width: 100vw;
   height: calc(100vh + var(--nav-bar-height));
-  background-color: rebeccapurple;
+  background-color: transparent;
 }
 
 .instructions {
