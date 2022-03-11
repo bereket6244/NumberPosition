@@ -6,15 +6,16 @@
   margin: 0;
 }
 
-html {
-  height: 100vh;
-}
 :root {
   --nav-bar-height: 3rem;
   --nav-color: rgba(149, 157, 165, 0.2);
   --blacked-out: rgb(105, 102, 102);
   --blacked-out-color: white;
   --brown-color: #303233;
+}
+
+body {
+  height: 100vh;
 }
 
 /* this is all for navigation  */
@@ -127,6 +128,7 @@ html {
   grid-template-rows: repeat(4, 1fr);
   gap: 2px;
   margin: 2px;
+  width: 100%;
   aspect-ratio: 1/0.7;
 }
 
