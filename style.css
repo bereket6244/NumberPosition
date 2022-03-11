@@ -210,16 +210,15 @@ button:hover {
 .instructions-overlay {
   position: absolute;
   width: 100vw;
-  height: calc(100vh + var(--nav-bar-height));
+  height: 100vh;
   background-color: transparent;
 }
 
 .instructions {
   position: absolute;
   right: 2rem;
-  top: 2rem;
   left: 2rem;
-  bottom: 2rem;
+  height: calc(100vh - var(--nav-bar-height));
   background-color: rgb(47, 48, 36);
   border: solid 5px var(--nav-color);
   color: white;
