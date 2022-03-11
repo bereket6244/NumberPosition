@@ -354,7 +354,7 @@ img {
   padding: 0.75em;
   border-radius: 0.25em;
   opacity: 1;
-  transform: all 0.05s ease-in-out;
+  transition: opacity 500ms ease-in-out;
   margin-bottom: 0.5em;
 }
 
