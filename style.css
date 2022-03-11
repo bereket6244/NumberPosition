@@ -6,6 +6,9 @@
   margin: 0;
 }
 
+html {
+  height: 100vh;
+}
 :root {
   --nav-bar-height: 3rem;
   --nav-color: rgba(149, 157, 165, 0.2);
@@ -76,7 +79,7 @@
 /* this is for the game part */
 
 .container {
-  height: calc(100vh - var(--nav-bar-height));
+  height: calc(100% - var(--nav-bar-height));
   display: flex;
   flex-direction: row;
   justify-content: center;
