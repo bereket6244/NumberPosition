@@ -13,6 +13,7 @@
   --blacked-out-color: white;
   --brown-color: #303233;
 }
+
 /* this is all for navigation  */
 .navbar {
   display: flex;
@@ -210,7 +211,7 @@ button:hover {
   position: absolute;
   width: 100vw;
   height: calc(100vh + var(--nav-bar-height));
-  background-color: transparent;
+  background-color: rebeccapurple;
 }
 
 .instructions {
@@ -232,7 +233,7 @@ button:hover {
 }
 
 .hidden-instructions {
-  transform: translateX(-50%);
+  transform: translateX(-100%);
 }
 
 .instruction-head {
