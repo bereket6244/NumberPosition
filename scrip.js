@@ -9,6 +9,8 @@ const closeBtn = document.getElementsByClassName("x-button")[0]
 const instructions = document.getElementsByClassName('instructions')[0]
 const instructionOpener = document.getElementsByClassName('instructions-opener')[0]
 const instructionsOverlay = document.getElementsByClassName('instructions-overlay')[0]
+const alertContainer = document.querySelector('[data-alert-container]')
+
 
 instructionsOverlay.addEventListener('click', ()=> {
 instructions.classList.add('hidden-instructions')
@@ -53,8 +55,8 @@ let correctPosition = 0
 let correctNumber = 0
 let triedAmount = 1
 let ranNum = []
+let numberOfGames = 0
 // let actialNum
-
 
 /* runs the functions that make the first rows of 
 squares in the hisory section, activates the 
@@ -65,6 +67,25 @@ document.addEventListener('DOMContentLoaded', () => {
     startInteraction();
     generateRandomNumber();
 })
+
+
+//show alert function 
+
+function showAlert(message, duration = 1000) {
+    const alert = document.createElement('div')
+    alert.textContent = message
+    alert.classList.add('alert')
+    alertContainer.prepend(alert)
+
+    if (duration == null) return
+
+    setTimeout(()=> {
+        alert.classList.add('hide')
+        alert.addEventListener('transitionend', ()=>{
+            alert.remove()
+        })
+    }, duration)
+}
 
 //generates a random four digit number with no digit being similar
 function generateRandomNumber(){
@@ -240,17 +261,17 @@ function checkNumPresence() {
           second.innerHTML === third.innerHTML || second.innerHTML === fourth.innerHTML||
           third.innerHTML === fourth.innerHTML){
               if (first.innerHTML === "" && second.innerHTML === "" && third.innerHTML=== "" && fourth.innerHTML=== ""){
-                  alert("All fields are empty")
+                  showAlert("All fields are empty")
               }
               else if(first.innerHTML === "" || second.innerHTML === "" || third.innerHTML=== "" || fourth.innerHTML=== ""){
-                  alert("Fill all fields")
+                  showAlert("Fill all fields")
               }
               else{
-                alert("you cant input the same digit twice")
+                showAlert("you cant input the same digit twice")
               }
             }
             else if (first.innerHTML === "" || second.innerHTML === "" || third.innerHTML === "" || fourth.innerHTML === ""){
-            alert("input all fields homie")
+            showAlert("input all fields homie")
             }
             else {
             let n1 = first.innerHTML.toString()

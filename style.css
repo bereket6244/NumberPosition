@@ -334,6 +334,39 @@ img {
   max-width: 100%;
 }
 
+/* this is for alert */
+
+.alert-container {
+  color: white;
+  position: fixed;
+  top: 10vh;
+  left: 50vh;
+  transform: translate(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.alert {
+  pointer-events: none;
+  background-color: rgb(100, 100, 100);
+  padding: 0.75em;
+  border-radius: 0.25em;
+  opacity: 1;
+  transform: all 0.05s ease-in-out;
+  margin-bottom: 0.5em;
+}
+
+.alert:last-child {
+  margin-bottom: 0;
+  z-index: -1;
+}
+
+.alert.hide {
+  opacity: 0;
+}
+
 @media (max-width: 600px) {
   .navbar {
     box-shadow: var(--nav-color) 0px 3px 4px;
