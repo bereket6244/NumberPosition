@@ -206,6 +206,13 @@ button:hover {
 
 /* this is for the instructions */
 
+.instructions-overlay {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh + var(--nav-bar-height));
+  background-color: transparent;
+}
+
 .instructions {
   position: absolute;
   right: 2rem;

@@ -8,14 +8,26 @@ const hamburger3 = document.getElementsByClassName('third')[0];
 const closeBtn = document.getElementsByClassName("x-button")[0]
 const instructions = document.getElementsByClassName('instructions')[0]
 const instructionOpener = document.getElementsByClassName('instructions-opener')[0]
+const instructionsOverlay = document.getElementsByClassName('instructions-overlay')[0]
+
+instructionsOverlay.addEventListener('click', ()=> {
+instructions.classList.add('hidden-instructions')
+instructionsOverlay.classList.add('hidden-instructions')
+})
 
 closeBtn.addEventListener('click', () => {
-    instructions.classList.add('hidden-instructions')
+    // instructions.classList.toggle('hidden-instructions')
+    instructionsOverlay.classList.add('hidden-instructions')
+
   })
 
   instructionOpener.addEventListener('click', ()=>{
     instructions.classList.remove('hidden-instructions')
+    instructionsOverlay.classList.remove('hidden-instructions')
   listitems.classList.toggle('hidden')
+  hamburger1.classList.toggle('top')
+  hamburger2.classList.toggle('middle')
+  hamburger3.classList.toggle('bottom')
 
 
   })
