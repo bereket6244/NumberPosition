@@ -129,6 +129,7 @@ body {
 }
 
 .square {
+  width: minmax(50% auto);
   aspect-ratio: 1/1;
   border: 1px solid rgb(255, 251, 251);
   margin: 1px;
