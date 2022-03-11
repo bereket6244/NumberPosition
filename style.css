@@ -232,7 +232,7 @@ button:hover {
 }
 
 .hidden-instructions {
-  display: none;
+  transform: translateX(-50%);
 }
 
 .instruction-head {
