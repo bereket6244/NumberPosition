@@ -264,14 +264,14 @@ function checkNumPresence() {
                   showAlert("All fields are empty")
               }
               else if(first.innerHTML === "" || second.innerHTML === "" || third.innerHTML=== "" || fourth.innerHTML=== ""){
-                  showAlert("Fill all fields")
+                  showAlert("Fill all squares")
               }
               else{
-                showAlert("you cant input the same digit twice")
+                showAlert("Similar digits present")
               }
             }
             else if (first.innerHTML === "" || second.innerHTML === "" || third.innerHTML === "" || fourth.innerHTML === ""){
-            showAlert("input all fields homie")
+            showAlert("You must fill all squares")
             }
             else {
             let n1 = first.innerHTML.toString()
