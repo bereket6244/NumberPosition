@@ -332,6 +332,9 @@ img {
   max-width: 80%;
 }
 
+.third-instruction-section li {
+  padding: 1rem;
+}
 /* this is for alert */
 
 .alert-container {
