@@ -335,6 +335,10 @@ img {
 .third-instruction-section li {
   padding: 1rem;
 }
+
+.third-instruction-section h2 {
+  border-bottom: 2px rgba(255, 255, 255, 0.5) solid;
+}
 /* this is for alert */
 
 .alert-container {
