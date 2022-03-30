@@ -308,6 +308,7 @@ button:hover {
 
 h5 {
   padding: 2rem;
+  line-height:2;
 }
 
 .first-instruction-section,
@@ -447,6 +448,9 @@ img {
 }
 
 @media (max-width: 500px) {
+  .x-button {
+    display:none;
+  }
   .hide {
     display: none;
   }
