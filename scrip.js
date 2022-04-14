@@ -247,7 +247,7 @@ function pressKey(key) {
 /*for delete key: lets user delete data from the guessing squares and removes the 
 class name active for said guessing square*/
 function deleteKey() {
-  for (i = 3; i >= 0; i--) {
+  for (let i = 3; i >= 0; i--) {
     if (document.getElementsByClassName("guess")[i].classList[2] === "active") {
       document.getElementsByClassName("guess")[i].innerHTML = "";
       document.getElementsByClassName("guess")[i].classList.remove("active");
